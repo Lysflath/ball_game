@@ -1,0 +1,17 @@
+player1
+300
+player2
+1800
+player3
+300
+player4
+3600
+player5
+200
+player6
+0
+Professor
+2800
+I tried
+2700
+

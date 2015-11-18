@@ -1,0 +1,19 @@
+﻿<Window x:Class="ball_game.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="725" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                <GradientStop Color="#FFAC96B7" Offset="0" />
+                <GradientStop Color="#F5BD68CB" Offset="1" />
+                <GradientStop Color="#B52E1F80" Offset="0.5" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Cath the Ball " Height="88" HorizontalAlignment="Left" Margin="212,12,0,0" Name="label1" VerticalAlignment="Top" Width="296" Foreground="#FF0AFFEC" FontSize="45" FontFamily="Forte" />
+        <Label Content="New Game" FontFamily="Forte" FontSize="35" Foreground="#FF0AFFEC" Height="54" HorizontalAlignment="Center" Margin="212,106,309,0" Name="label2" VerticalAlignment="Top" Width="182" MouseLeftButtonDown="label2_MouseLeftButtonDown" />
+        <Label Content="Best Scores" FontFamily="Forte" FontSize="35" Foreground="#FF0AFFEC" Height="54" HorizontalAlignment="Center" Margin="212,166,309,0" Name="label3" VerticalAlignment="Top" Width="182" MouseLeftButtonDown="label3_MouseLeftButtonDown" />
+        <Label FontFamily="Forte" FontSize="35" Foreground="#FF0AFFEC" Height="58" HorizontalAlignment="Center" Margin="212,226,309,0" Name="label4" VerticalAlignment="Top" Width="182" Content="Settings" />
+        <Label Content="Exit" FontFamily="Forte" FontSize="35" Foreground="#FF0AFFEC" Height="62" HorizontalAlignment="Right" Margin="0,269,12,0" Name="label5" VerticalAlignment="Top" Width="81" />
+    </Grid>
+</Window>
