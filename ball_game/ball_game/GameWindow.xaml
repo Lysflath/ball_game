@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="GameWindow" Height="400" Width="725"  WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Closed="Window_Closed">
-    <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+    <Grid Name ="grid" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
         <Grid.Background>
             <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
                 <GradientStop Color="#FFAC96B7" Offset="0" />
@@ -12,17 +12,12 @@
         </Grid.Background>
         <Label Content="Score" FontFamily="Forte" FontSize="25" Foreground="#FF0AFFEC" Height="54" HorizontalAlignment="Center" Margin="12,12,598,0" Name="label2" VerticalAlignment="Top" Width="93" Visibility="Hidden" />
         <Label Content="Lives" FontFamily="Forte" FontSize="25" Foreground="#FF0AFFEC" Height="54" HorizontalAlignment="Center" Margin="12,72,629,0" Name="label3" VerticalAlignment="Top" Width="62" Visibility="Hidden" />
-        <Label Content="Exit" FontFamily="Forte" FontSize="25" Foreground="#FF0AFFEC" Height="62" HorizontalAlignment="Right" Margin="0,269,12,0" Name="label5" VerticalAlignment="Top" Width="81" Visibility="Hidden" MouseLeftButtonDown="label5_MouseLeftButtonDown" />
         <Label Content="Start" FontFamily="Forte" FontSize="35" Foreground="#FF0AFFEC" Height="54" HorizontalAlignment="Center" Margin="298,129,320,0" Name="label1" VerticalAlignment="Top" Width="85" MouseLeftButtonDown="label1_MouseLeftButtonDown" />
         <Ellipse Fill ="Aqua" Name="ell" Visibility="Visible" HorizontalAlignment="Left" Width="40" Height="40" VerticalAlignment="Top" Margin="0" Panel.ZIndex="1">
             
         </Ellipse>
         <Label FontFamily="Forte" FontSize="25" Foreground="#FF0AFFEC" Height="54" HorizontalAlignment="Center" Margin="89,12,477,0" Name="label4" VerticalAlignment="Top" Visibility="Visible" Width="137" />
-        <Label FontFamily="Forte" FontSize="25" Foreground="#FF0AFFEC" Height="54" HorizontalAlignment="Center" Margin="80,72,488,0" Name="label6" VerticalAlignment="Top" Visibility="Visible" Width="135" />
-        <Label Content="Your result : " FontFamily="Forte" FontSize="35" Foreground="#FF0AFFEC" Height="65" HorizontalAlignment="Center" Margin="202,129,89,0" Name="label7" VerticalAlignment="Top" Width="412" Visibility="Hidden" />
-        <Label Content="GAME OVER" FontFamily="Forte" FontSize="35" Foreground="#FF0AFFEC" Height="102" HorizontalAlignment="Center" Margin="239,24,251,0" Name="label8" VerticalAlignment="Top" Width="213" Visibility="Hidden" />
-        <Label Content="Input your name" FontFamily="Forte" FontSize="25" Foreground="#FF0AFFEC" Height="45" HorizontalAlignment="Center" Margin="120,227,383,0" Name="label9" VerticalAlignment="Top" Visibility="Hidden" Width="200" />
-        <TextBox Height="45" HorizontalAlignment="Left" Margin="326,227,0,0" Name="textBox1" VerticalAlignment="Top" Width="213" Foreground="#FF0AFFEC" Background="#00000000" BorderBrush="#9B0AFFEC" FontSize="25" Visibility="Hidden" FontFamily="Forte" />
-        <Label Content="OK" FontFamily="Forte" FontSize="25" Foreground="#FF0AFFEC" Height="45" HorizontalAlignment="Center" Margin="639,304,12,0" Name="label10" VerticalAlignment="Top" Visibility="Hidden" Width="52" MouseLeftButtonDown="label10_MouseLeftButtonDown" />
+        <Label FontFamily="Forte" FontSize="25" Foreground="#FF0AFFEC" Height="54" HorizontalAlignment="Center" Margin="80,72,488,0" Name="label6" VerticalAlignment="Top" Visibility="Visible" Width="135" />        
+        <Label Content="Back" FontFamily="Forte" FontSize="35" Foreground="#FF0AFFEC" Height="54" HorizontalAlignment="Center" Margin="606,295,12,0" Name="label9" VerticalAlignment="Top" Width="85" MouseLeftButtonDown="label9_MouseLeftButtonDown" Visibility="Hidden" />
     </Grid>
 </Window>

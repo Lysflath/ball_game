@@ -35,6 +35,14 @@ namespace ball_game
         public GameWindow()
         {
             InitializeComponent();
+            if (SettingsWindow.themeID == 1)
+            {
+                SettingsWindow.painting(255, 172, 150, 183, 181, 46, 31, 128, 245, 189, 104, 203, grid);
+            }
+            if (SettingsWindow.themeID == 2)
+            {
+                SettingsWindow.painting(255, 68, 167, 159, 164, 74, 153, 97, 196, 116, 167, 180, grid);
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -77,7 +85,6 @@ namespace ball_game
             label1.Visibility = System.Windows.Visibility.Hidden;
             label2.Visibility = System.Windows.Visibility.Visible;
             label3.Visibility = System.Windows.Visibility.Visible;
-            label5.Visibility = System.Windows.Visibility.Visible;
             ell.Visibility = System.Windows.Visibility.Visible;
 
             timer.Tick += new EventHandler(timerTick); // ініціалізація таймера
@@ -115,6 +122,7 @@ namespace ball_game
         {
             lives -= 1;
             label6.Content = lives.ToString();
+            GameOverWindow.result_import = result;
 
             // кінець гри, коли гравець витратив усі свої життя
             if (lives == 0)
@@ -122,25 +130,22 @@ namespace ball_game
                 label1.Visibility = System.Windows.Visibility.Hidden;
                 label2.Visibility = System.Windows.Visibility.Hidden;
                 label3.Visibility = System.Windows.Visibility.Hidden;
-                label5.Visibility = System.Windows.Visibility.Hidden;
                 label6.Visibility = System.Windows.Visibility.Hidden;
                 label4.Visibility = System.Windows.Visibility.Hidden;
-                ell.Visibility = System.Windows.Visibility.Hidden;
-                label7.Content += result.ToString();
-                label7.Visibility = System.Windows.Visibility.Visible;
-                label8.Visibility = System.Windows.Visibility.Visible;
+                ell.Visibility = System.Windows.Visibility.Hidden;            
                 label9.Visibility = System.Windows.Visibility.Visible;
-                textBox1.Visibility = System.Windows.Visibility.Visible;
-                label10.Visibility = System.Windows.Visibility.Visible;
                 result = 0;
                 lives = 4;
+                coeficient = 1;
 
+                GameOverWindow gow = new GameOverWindow();
+                gow.Show();
+                this.Hide();
             }
         }
 
-        private void label10_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        /*private void label10_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            name = textBox1.Text; // ім'я гравця
             path = System.IO.Path.GetFullPath(@"D:\Programs\Visual Studio\.net\ball_game\ball_game\ball_game\scores"); //шлях до текстового файлу, у якому будуть зберігатись результати
             DirectoryInfo dir = new DirectoryInfo(path);
             foreach (FileInfo file in dir.GetFiles()) // перебір файлів(1) у спеціальній директорії
@@ -153,11 +158,11 @@ namespace ball_game
             MainWindow mw = new MainWindow();
             this.Hide();
             mw.Show();
-        }
+        }*/
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            //Environment.Exit(0);
         }
 
         private void label5_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -165,8 +170,13 @@ namespace ball_game
             MainWindow mw = new MainWindow();
             mw.Show();
             this.Hide();
-            result = 0;
-            lives = 4;
+        }
+
+        private void label9_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Hide();
         }
 
     }

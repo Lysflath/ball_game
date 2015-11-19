@@ -23,13 +23,21 @@ namespace ball_game
         public MainWindow()
         {
             InitializeComponent();
+            if (SettingsWindow.themeID == 1)
+            {
+                SettingsWindow.painting(255, 172, 150, 183, 181, 46, 31, 128, 245, 189, 104, 203, grid);
+            }
+            if (SettingsWindow.themeID == 2)
+            {
+                SettingsWindow.painting(255, 68, 167, 159, 164, 74, 153, 97, 196, 116, 167, 180, grid);
+            }
         }
 
         private void label2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             GameWindow gw = new GameWindow();
             gw.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void label3_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -71,6 +79,18 @@ namespace ball_game
                 label2.Content += sorted_array[sorted_array.Length - 2].ToString() + names[2];
                 label1.Content += sorted_array[sorted_array.Length - 1].ToString() + names[1];
             }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void label4_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            SettingsWindow sw = new SettingsWindow();
+            sw.Show();
+            this.Hide();
         }
     }
 }

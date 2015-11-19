@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Programs\Visual Studio\.net\ball_game\ball_game\ball_game\App.xaml
-3741038693
+5320478527
 
-8-703683909
+10-107205901
 12-1547151337
-GameWindow.xaml;MainWindow.xaml;ScoresWindow.xaml;
+GameOverWindow.xaml;GameWindow.xaml;MainWindow.xaml;ScoresWindow.xaml;SettingsWindow.xaml;
 
 False
 
